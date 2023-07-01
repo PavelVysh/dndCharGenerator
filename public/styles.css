@@ -1,3 +1,37 @@
-p {
-    color: red;
+#root {
+    width: 90%;
+    margin: auto;
+}
+.char-create.container {
+    border: 1px solid black;
+    height: 6rem;
+}
+.header.container {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.header.stats {
+    float: right;
+}
+.header.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+}
+.grid-item {
+    align-self: center;
+}
+.vert-center {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+.wrapper {
+    height: 100%;
 }

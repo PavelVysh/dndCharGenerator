@@ -1,10 +1,13 @@
 import React from 'react';
 import CharCreation from './components/charCreation';
+import Header from './components/header';
 
 
 function App() {
-  return (
+  return (<div>
+    <Header />
     <CharCreation />
+    </div>
   );
 }
 
