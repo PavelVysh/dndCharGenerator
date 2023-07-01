@@ -78,3 +78,6 @@
 .main-stat.container input {
     width: 3rem;
 }
+.main-stat.container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
