@@ -17,7 +17,7 @@ function CharCreationHeader() {
             <GridItem labelFor="player-name" labelText="Player Name" inputSize="8" inputType="text" inputName="player-name" inputId="player-name" br=<br /> />
             <GridItem labelFor="race" labelText="Race" inputSize="8" inputType="text" inputName="race" inputId="race" br=<br /> />
             <GridItem labelFor="alignment" labelText="Alignment" inputSize="8" inputType="text" inputName="alignment" inputId="alignment" br=<br /> />
-            <GridItem labelFor="experience" labelText="Class" inputSize="8" inputType="text" inputName="experience" inputId="experience" br=<br /> />
+            <GridItem labelFor="experience" labelText="Experience" inputSize="8" inputType="text" inputName="experience" inputId="experience" br=<br /> />
          </div>
       </div>
    </div>
