@@ -1,9 +1,10 @@
+import React from 'react';
+import CharCreation from './components/charCreation';
 
-import './App.css';
 
 function App() {
   return (
-    <h1>Hello There</h1>
+    <CharCreation />
   );
 }
 
