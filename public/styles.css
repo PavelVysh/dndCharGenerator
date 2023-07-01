@@ -1,6 +1,8 @@
 #root {
     width: 90%;
     margin: auto;
+    max-width: 900px;
+    min-width: 600px;
 }
 .char-create.container {
     border: 1px solid black;
@@ -34,4 +36,17 @@
 }
 .wrapper {
     height: 100%;
+}
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 70rem;
+    width: 100%;
+}
+.chars {
+    border: 1px solid black;
+    grid-row: 1 / span 2;
+    height: 100%;
+    width: 100%;
 }
