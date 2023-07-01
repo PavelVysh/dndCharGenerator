@@ -4,18 +4,22 @@
     max-width: 900px;
     min-width: 600px;
 }
+
 .char-create.container {
     border: 1px solid black;
     height: 6rem;
 }
+
 .header.container {
     display: inline-block;
     width: 50%;
     height: 100%;
 }
+
 .header.stats {
     float: right;
 }
+
 .header.grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -24,9 +28,11 @@
     height: 100%;
     width: 100%;
 }
+
 .grid-item {
     align-self: center;
 }
+
 .vert-center {
     display: flex;
     justify-content: space-evenly;
@@ -34,9 +40,11 @@
     align-items: center;
     height: 100%;
 }
+
 .wrapper {
     height: 100%;
 }
+
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -44,6 +52,7 @@
     height: 70rem;
     width: 100%;
 }
+
 .chars {
     border: 1px solid black;
     grid-row: 1 / span 2;
