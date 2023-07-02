@@ -12,6 +12,13 @@ function Stats(props) {
     
     const stats = props.stats;
 
+    const strBonus = countBonus(stats.strength);
+    const dexBonus = countBonus(stats.dexterity);
+    const conBonus = countBonus(stats.constitution);
+    const intBonus = countBonus(stats.intelligence);
+    const wisBonus = countBonus(stats.wisdom);
+    const chaBonus = countBonus(stats.charisma);
+
     return <div className="chars">
         <div className="main-stats container">
             <Stat stat="strength" val={stats.strength} setter={props.setStats} />
@@ -27,33 +34,33 @@ function Stats(props) {
                 <SingleStat stat="proficiency" />
             </div>
             <div className="saving-throws container">
-                <SavingThrow name="Strength" stat={countBonus(stats.strength)} />
-                <SavingThrow name="Dexterity" stat={countBonus(stats.dexterity)} />
-                <SavingThrow name="Constitution" stat={countBonus(stats.constitution)} />
-                <SavingThrow name="Intelligence" stat={countBonus(stats.intelligence)} />
-                <SavingThrow name="Wisdom" stat={countBonus(stats.wisdom)} />
-                <SavingThrow name="Charisma" stat={countBonus(stats.charisma)} />
+                <SavingThrow name="Strength" stat={strBonus} />
+                <SavingThrow name="Dexterity" stat={dexBonus} />
+                <SavingThrow name="Constitution" stat={conBonus} />
+                <SavingThrow name="Intelligence" stat={intBonus} />
+                <SavingThrow name="Wisdom" stat={wisBonus} />
+                <SavingThrow name="Charisma" stat={chaBonus} />
                 <p className="text-center uppercase">Saving Throws</p>
             </div>
             <div className="skills container">
-                <Skill name="Acrobatics" stat={countBonus(stats.dexterity)}/>
-                <Skill name="Animal Handling" stat={countBonus(stats.wisdom)}/>
-                <Skill name="Arcana" stat={countBonus(stats.intelligence)}/>
-                <Skill name="Athletics" stat={countBonus(stats.strength)}/>
-                <Skill name="Deception" stat={countBonus(stats.charisma)}/>
-                <Skill name="History" stat={countBonus(stats.intelligence)}/>
-                <Skill name="Insight" stat={countBonus(stats.wisdom)}/>
-                <Skill name="Intimidate" stat={countBonus(stats.charisma)}/>
-                <Skill name="Investigation" stat={countBonus(stats.intelligence)}/>
-                <Skill name="Medicine" stat={countBonus(stats.wisdom)}/>
-                <Skill name="Nature" stat={countBonus(stats.intelligence)}/>
-                <Skill name="Perception" stat={countBonus(stats.wisdom)}/>
-                <Skill name="Performance" stat={countBonus(stats.charisma)}/>
-                <Skill name="Persuasion" stat={countBonus(stats.charisma)}/>
-                <Skill name="Religion" stat={countBonus(stats.intelligence)}/>
-                <Skill name="Sleight of Hand" stat={countBonus(stats.dexterity)}/>
-                <Skill name="Stealth" stat={countBonus(stats.dexterity)}/>
-                <Skill name="Survival" stat={countBonus(stats.wisdom)}/>
+                <Skill name="Acrobatics" stat={dexBonus}/>
+                <Skill name="Animal Handling" stat={wisBonus}/>
+                <Skill name="Arcana" stat={intBonus}/>
+                <Skill name="Athletics" stat={strBonus}/>
+                <Skill name="Deception" stat={chaBonus}/>
+                <Skill name="History" stat={intBonus}/>
+                <Skill name="Insight" stat={wisBonus}/>
+                <Skill name="Intimidate" stat={chaBonus}/>
+                <Skill name="Investigation" stat={intBonus}/>
+                <Skill name="Medicine" stat={wisBonus}/>
+                <Skill name="Nature" stat={intBonus}/>
+                <Skill name="Perception" stat={wisBonus}/>
+                <Skill name="Performance" stat={chaBonus}/>
+                <Skill name="Persuasion" stat={chaBonus}/>
+                <Skill name="Religion" stat={intBonus}/>
+                <Skill name="Sleight of Hand" stat={dexBonus}/>
+                <Skill name="Stealth" stat={dexBonus}/>
+                <Skill name="Survival" stat={wisBonus}/>
                 <p className="text-center uppercase">Skills</p>
             </div>
         </div>
