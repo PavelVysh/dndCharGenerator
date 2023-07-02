@@ -1,8 +1,9 @@
 import React from "react";
 import LabelInput from "./subParts/labelInput";
 import GridItem from "./subParts/gridItem";
+import RaceSelector from "./subParts/raceSelector";
 
-function CharCreationHeader() {
+function CharCreationHeader(props) {
    return <div className="wrapper">
       <div className="header char-name container">
          <div className="vert-center">
@@ -15,7 +16,7 @@ function CharCreationHeader() {
             <GridItem labelFor="class-level" labelText="Class" inputSize="8" inputType="text" inputName="class-level" inputId="class-level" br=<br /> />
             <GridItem labelFor="background" labelText="Background" inputSize="8" inputType="text" inputName="background" inputId="background" br=<br /> />
             <GridItem labelFor="player-name" labelText="Player Name" inputSize="8" inputType="text" inputName="player-name" inputId="player-name" br=<br /> />
-            <GridItem labelFor="race" labelText="Race" inputSize="8" inputType="text" inputName="race" inputId="race" br=<br /> />
+            <RaceSelector labelFor="race" labelText="Race" inputSize="8" inputType="text" inputName="race" inputId="race" br=<br /> stats={props.stats} setStats={props.setStats} />
             <GridItem labelFor="alignment" labelText="Alignment" inputSize="8" inputType="text" inputName="alignment" inputId="alignment" br=<br /> />
             <GridItem labelFor="experience" labelText="Experience" inputSize="8" inputType="text" inputName="experience" inputId="experience" br=<br /> />
          </div>

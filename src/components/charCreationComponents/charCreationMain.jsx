@@ -1,9 +1,9 @@
 import React from "react";
 import CharCreationStats from "./charCreationStats";
 
-function Main() {
+function Main(props) {
     return (<div className="main">
-        <CharCreationStats />
+        <CharCreationStats stats={props.stats} setStats={props.setStats}/>
     </div>);
 }
 

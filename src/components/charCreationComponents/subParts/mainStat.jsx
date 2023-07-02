@@ -3,14 +3,19 @@ import React from "react";
 function Stat(props) {
 
 
-    function getBonus(event) {
-        props.setter(Math.max(Math.min(Math.floor((Number(event.target.value) / 2) - 5), 10), -5));
+    function countBonus(number) {
+        return Math.max(Math.min(Math.floor((Number(number) / 2) - 5), 10), -5);
     }
 
+    function getBonus(event) {
+        const value = event.target.value;
+        props.setter(prev => ({...prev ,[props.stat]: value}));
+
+    }
     return (<div className="main-stat container">
         <label htmlFor={props.stat}>{props.stat}</label>
-        <input type="number" onChange={getBonus} name={props.stat} id={props.stat}></input>
-        <p className="stat-bonus">{props.val > 0 && "+"}{props.val}</p>
+        <input type="number" onChange={getBonus} name={props.stat} id={props.stat} value={props.val}></input>
+        <p className="stat-bonus">{countBonus(props.val) > 0 && "+"}{countBonus(props.val)}</p>
     </div>)
 }
 
