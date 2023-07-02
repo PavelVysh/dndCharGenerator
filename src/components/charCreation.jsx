@@ -13,8 +13,10 @@ function CharCreation() {
         charisma: 10
     });
 
+    const [race, setRace] = useState("");
+
     return <div className="char-create container">
-        <CharCreationHeader stats={stats} setStats={setStats}/>
+        <CharCreationHeader stats={stats} setStats={setStats} setRace={setRace}/>
         <Main stats={stats} setStats={setStats}/>
     </div>;
 }

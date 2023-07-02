@@ -12,6 +12,7 @@ function RaceSelector(props) {
         removeStat(props, prevRace);
         setPrevRace(value);
         addStat(props, value);
+        props.setRace(value);
     }
 
     return <div className="grid-item">
