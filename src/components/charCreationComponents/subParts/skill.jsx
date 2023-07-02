@@ -16,7 +16,7 @@ function Skill(props) {
 
     return <div>
         <input type="checkbox" onClick={changeCheck}></input>
-        <input type="number" name={props.name} id={props.name} value={val} onChange={changeVal}></input>
+        <input type="number" name={props.name} id={props.name} value={Number(val) + props.stat} onChange={changeVal} readOnly></input>
         <label htmlFor={props.name}>{props.name}</label>
     </div>
 }

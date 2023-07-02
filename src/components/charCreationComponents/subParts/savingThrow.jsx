@@ -7,7 +7,7 @@ function SavingThrow(props) {
 
     function changeCheck() {
         check ? setCheck(false) : setCheck(true);
-        check ? setVal(Number(val) + 3) : setVal(Number(val) - 3);
+        check ? setVal(Number(val) + 2) : setVal(Number(val) - 2);
     }
 
     function changeVal(event) {
@@ -16,7 +16,7 @@ function SavingThrow(props) {
 
     return <div>
         <input type="checkbox" onClick={changeCheck}></input>
-        <input type="number" name={props.name} id={props.name} value={val} onChange={changeVal}></input>
+        <input type="number" name={props.name} id={props.name} value={Number(val) + props.stat} onChange={changeVal} readOnly></input>
         <label htmlFor={props.name}>{props.name}</label>
     </div>
 }
