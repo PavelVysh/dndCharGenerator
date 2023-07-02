@@ -1,8 +1,8 @@
 #root {
     width: 90%;
     margin: auto;
-    max-width: 900px;
-    min-width: 600px;
+    max-width: 1200px;
+    min-width: 810px;
 }
 
 .char-create.container {
@@ -60,7 +60,7 @@
     width: 100%;
 }
 .main-stats.container {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid red;
@@ -75,9 +75,41 @@
     text-align: center;
     margin: auto;
 }
-.main-stat.container input {
-    width: 3rem;
-}
-.main-stat.container input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+.inline {
+    display: inline;
+}
+input[type="number"] {
+    width: 2rem;
+}
+.single-stats.container {
+    display: inline-block;
+    border: 1px solid black;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.saving-throws.container {
+    display: inline-block;
+    border: 1px solid salmon;
+    width: 100%;
+}
+.skills.container {
+    margin-top: 30px;
+    display: inline-block;
+    border: 1px solid lime;
+    width: 100%;
+}
+.right-part {
+    display: inline;
+    width: 64%;
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+.uppercase {
+    text-transform: uppercase;
 }
