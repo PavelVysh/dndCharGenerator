@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import races from "../data/races";
-import {removeStat, addStat} from "../../helperFunctions";
+import races from "../../data/races";
+import {removeStat, addStat} from "../../../helperFunctions";
 
 
 function RaceSelector(props) {
@@ -16,9 +16,9 @@ function RaceSelector(props) {
     }
 
     return <div className="grid-item">
-        <label htmlFor={props.labelFor}>{props.labelText}</label>
-        {props.br}
-        <select size={1} onChange={addStats} type={props.inputType} name={props.inputName} id={props.inputId}>
+        <label htmlFor="race">Race</label>
+        <br />
+        <select size={1} onChange={addStats} type="text" name="race" id="race">
             {races().map((race) => (
                 <option value={race} key={race}>{race}</option>
             ))}
