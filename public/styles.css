@@ -20,6 +20,9 @@
 .header.stats {
     float: right;
 }
+.zero-margin {
+    margin: 0;
+}
 
 .header.grid {
     display: grid;
@@ -138,4 +141,34 @@ input[type="number"] {
     height: 20%;
     display: flex;
     justify-content: space-around;
+}
+.central-row {
+    height: 25%;
+    border: 1px solid burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.central-bot-row {
+    display: flex;
+    border: 1px solid olivedrab;
+    height: 29%;
+}
+.hit-dice {
+    border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    flex: 1 1 0px;
+    width: 0;
+}
+.full-width {
+    width: 100%;
+}
+.right-align {
+    display: flex;
+    justify-content: flex-end;
 }
