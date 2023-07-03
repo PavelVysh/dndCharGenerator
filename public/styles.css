@@ -50,6 +50,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
     height: 70rem;
     width: 100%;
 }
@@ -113,4 +114,28 @@ input[type="number"] {
 }
 .uppercase {
     text-transform: uppercase;
+}
+.central-stats {
+    border: 1px solid blue;
+}
+.center {
+    text-align: center;
+}
+.third {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid red;
+    height: 100%;
+    flex: 1 1 0px;
+    width: 0;
+}
+.margin-auto {
+    margin: auto;
+}
+.central-top-row {
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
 }

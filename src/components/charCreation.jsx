@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import CharCreationHeader from "./charCreationComponents/charCreationHeader";
 import Main from "./charCreationComponents/charCreationMain";
 
+
 function CharCreation() {
 
     const [stats, setStats] = useState({
