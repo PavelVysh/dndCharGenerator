@@ -7,17 +7,17 @@ import TempHp from "./charCreationComponents/subParts/centralStats/tempHp";
 import HitDice from "./charCreationComponents/subParts/centralStats/hitDice";
 import DeathSaves from "./charCreationComponents/subParts/centralStats/deathSaves";
 
-function CentralStats(props) {
+function CentralStats() {
     return (<div className="central-stats container">
         <div className="central-top-row">
             <ArmorClass />
-            <Initiative stats={props.stats} />
-            <Speed race={props.race} />
+            <Initiative />
+            <Speed />
         </div>
         <CurrentHp />
         <TempHp />
         <div className="central-bot-row">
-            <HitDice charClass={props.charClass}/>
+            <HitDice />
             <DeathSaves />
         </div>
     </div>)

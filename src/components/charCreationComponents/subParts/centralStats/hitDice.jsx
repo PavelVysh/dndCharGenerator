@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CharCreationContext } from "../../../charCreation";
 
-function HitDice(props) {
+function HitDice() {
+
+    const {charClass} = useContext(CharCreationContext);
 
     function getHitDice() {
-        switch(props.charClass) {
+        switch(charClass) {
             case "Wizard":
             case "Sorcerer": return "d6";
             case "Warlock":
             case "Cleric": 
-            case "Bark": 
+            case "Bard": 
             case "Rogue": 
             case "Druid": 
             case "Monk": return "d8";

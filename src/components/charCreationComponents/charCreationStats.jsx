@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import Stat from "./subParts/mainStat";
 import SingleStat from "./subParts/singleStats";
 import SavingThrow from "./subParts/savingThrow";
 import Skill from "./subParts/skill";
+import { CharCreationContext } from "../charCreation";
 
-function Stats(props) {
+function Stats() {
 
     function countBonus(number) {
         return Math.max(Math.min(Math.floor((Number(number) / 2) - 5), 10), -5);
     }
-    
-    const stats = props.stats;
+
+    const {stats, setStats} = useContext(CharCreationContext);
 
     const strBonus = countBonus(stats.strength);
     const dexBonus = countBonus(stats.dexterity);
@@ -21,12 +22,12 @@ function Stats(props) {
 
     return <div className="chars">
         <div className="main-stats container">
-            <Stat stat="strength" val={stats.strength} setter={props.setStats} />
-            <Stat stat="dexterity" val={stats.dexterity} setter={props.setStats} />
-            <Stat stat="constitution" val={stats.constitution} setter={props.setStats} />
-            <Stat stat="intelligence" val={stats.intelligence} setter={props.setStats} />
-            <Stat stat="wisdom" val={stats.wisdom} setter={props.setStats} />
-            <Stat stat="charisma" val={stats.charisma} setter={props.setStats} />
+            <Stat stat="strength" val={stats.strength} setter={setStats} />
+            <Stat stat="dexterity" val={stats.dexterity} setter={setStats} />
+            <Stat stat="constitution" val={stats.constitution} setter={setStats} />
+            <Stat stat="intelligence" val={stats.intelligence} setter={setStats} />
+            <Stat stat="wisdom" val={stats.wisdom} setter={setStats} />
+            <Stat stat="charisma" val={stats.charisma} setter={setStats} />
         </div>
         <div className="right-part">
             <div className="single-stats container">

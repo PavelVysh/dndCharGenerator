@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CharCreationContext } from "../../../charCreation";
 
-function Speed(props) {
+function Speed() {
+
+    const {race} = useContext(CharCreationContext);
 
     function getSpeed() {
-        switch (props.race) {
+        switch (race) {
             case "Dwarf":
             case "Gnome": return 25;
             default: return 30;

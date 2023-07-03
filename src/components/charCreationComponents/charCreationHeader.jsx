@@ -5,7 +5,7 @@ import RaceSelector from "./subParts/selectors/raceSelector";
 import AlignmentSelector from "./subParts/selectors/alignmentSelector";
 import ClassSelector from "./subParts/selectors/classSelector";
 
-function CharCreationHeader(props) {
+function CharCreationHeader() {
    return <div className="wrapper">
       <div className="header char-name container">
          <div className="vert-center">
@@ -15,10 +15,10 @@ function CharCreationHeader(props) {
       </div>
       <div className="header stats container">
          <div className="header stats grid">
-            <ClassSelector setClass={props.setClass}/>
+            <ClassSelector />
             <GridItem labelFor="background" labelText="Background" inputSize="8" inputType="text" inputName="background" inputId="background" />
             <GridItem labelFor="player-name" labelText="Player Name" inputSize="8" inputType="text" inputName="player-name" inputId="player-name" />
-            <RaceSelector stats={props.stats} setStats={props.setStats} setRace={props.setRace}/>
+            <RaceSelector />
             <AlignmentSelector />
             <GridItem labelFor="experience" labelText="Experience" inputSize="8" inputType="text" inputName="experience" inputId="experience" />
          </div>

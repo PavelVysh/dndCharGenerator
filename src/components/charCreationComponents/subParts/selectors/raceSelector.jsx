@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import races from "../../data/races";
 import {removeStat, addStat} from "../../../helperFunctions";
+import { CharCreationContext } from "../../../charCreation";
 
 
-function RaceSelector(props) {
+function RaceSelector() {
 
     const [prevRace, setPrevRace] = useState("");
+    const {setRace, stats, setStats} = useContext(CharCreationContext);
+
+    const props = {stats, setStats};
 
     function addStats(event) {
         const value = event.target.value;
         removeStat(props, prevRace);
         setPrevRace(value);
         addStat(props, value);
-        props.setRace(value);
+        setRace(value);
     }
 
     return <div className="grid-item">

@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, { useState, createContext } from "react";
 import CharCreationHeader from "./charCreationComponents/charCreationHeader";
 import Main from "./charCreationComponents/charCreationMain";
 
+export const CharCreationContext = createContext();
 
 function CharCreation() {
 
@@ -17,9 +18,20 @@ function CharCreation() {
     const [race, setRace] = useState("");
     const [charClass, setCharClass] = useState("");
 
+    const contextValue = {
+        stats,
+        setStats,
+        race,
+        setRace,
+        charClass,
+        setCharClass
+    };
+
     return <div className="char-create container">
-        <CharCreationHeader stats={stats} setStats={setStats} setRace={setRace} setClass={setCharClass}/>
-        <Main race={race} stats={stats} charClass={charClass} setStats={setStats}/>
+        <CharCreationContext.Provider value={contextValue}>
+            <CharCreationHeader />
+            <Main />
+        </CharCreationContext.Provider>
     </div>;
 }
 

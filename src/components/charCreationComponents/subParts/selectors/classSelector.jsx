@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "../../data/classes";
+import {CharCreationContext} from "../../../charCreation";
 
+function ClassSelector() {
 
-
-function ClassSelector(props) {
+    const {setCharClass} = useContext(CharCreationContext);
 
     function setClass(event) {
-        props.setClass(event.target.value);
+        setCharClass(event.target.value);
     }
 
     return <div className="grid-item">
