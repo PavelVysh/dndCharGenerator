@@ -3,7 +3,7 @@ import React from "react";
 function ArmorClass() {
     return (
         <div className="third">
-            <input type="number" className="center" name="armorClass" size="8"></input>
+            <input type="number" className="center" name="armorClass" id="armorClass" size="8"></input>
             <label htmlFor="armorClass" >Armor Class</label>
         </div>
     );

@@ -17,12 +17,9 @@ function CharCreation() {
     const [race, setRace] = useState("");
     const [charClass, setCharClass] = useState("");
 
-    console.log("char race: " + race);
-    console.log("char class: " + charClass);
-
     return <div className="char-create container">
         <CharCreationHeader stats={stats} setStats={setStats} setRace={setRace} setClass={setCharClass}/>
-        <Main stats={stats} setStats={setStats}/>
+        <Main race={race} stats={stats} charClass={charClass} setStats={setStats}/>
     </div>;
 }
 

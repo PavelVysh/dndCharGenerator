@@ -5,7 +5,7 @@ import CentralStats from "../centralStats";
 function Main(props) {
     return (<div className="main">
         <CharCreationStats stats={props.stats} setStats={props.setStats}/>
-        <CentralStats />
+        <CentralStats race={props.race} stats={props.stats} charClass={props.charClass}/>
     </div>);
 }
 
