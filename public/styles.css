@@ -172,3 +172,50 @@ input[type="number"] {
     display: flex;
     justify-content: flex-end;
 }
+.PIBF {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+.personality-traits {
+    width: 100%;
+    flex: 1 1 auto;
+    border: 1px solid greenyellow;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ideals {
+    width: 100%;
+    flex: 1 1 auto;
+    border: 1px solid gray;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bonds {
+    width: 100%;
+    flex: 1 1 auto;
+    border: 1px solid blueviolet;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flaws {
+    width: 100%;
+    flex: 1 1 auto;
+    border: 1px solid orange;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.center.zero-margin {
+    position: absolute;
+    bottom: 0;
+}

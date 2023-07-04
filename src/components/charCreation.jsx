@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 import CharCreationHeader from "./charCreationComponents/charCreationHeader";
-import Main from "./charCreationComponents/charCreationMain";
+import CharCreationMain from "./charCreationComponents/charCreationMain";
 
 export const CharCreationContext = createContext();
 
@@ -30,7 +30,7 @@ function CharCreation() {
     return <div className="char-create container">
         <CharCreationContext.Provider value={contextValue}>
             <CharCreationHeader />
-            <Main />
+            <CharCreationMain />
         </CharCreationContext.Provider>
     </div>;
 }
