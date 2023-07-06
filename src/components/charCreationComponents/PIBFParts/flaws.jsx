@@ -17,7 +17,7 @@ function Flaws() {
     }
 
     return <div className="flaws">
-        <input placeholder="Flaws" onKeyDown={enter}></input>
+        <input placeholder="Flaws" name="flaws" onKeyDown={enter}></input>
         {flaws.map((flaw, index) =>
             <div className="flaw" key={index}>
                 <p className="flaw inline zero-margin">{flaw}</p>

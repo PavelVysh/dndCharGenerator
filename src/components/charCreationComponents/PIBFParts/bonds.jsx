@@ -18,7 +18,7 @@ function Bonds() {
     }
 
     return <div className="bonds">
-        <input onKeyDown={enter} placeholder="Bonds"></input>
+        <input onKeyDown={enter} name="bonds" placeholder="Bonds"></input>
         {bonds.map((bond, index) =>
             <div key={index}>
                 <p className="bond zero-margin inline">{bond}</p>
