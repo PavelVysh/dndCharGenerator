@@ -5,6 +5,7 @@ import PIBF from "./PIBF";
 import Languages from "./subParts/languages";
 import Features from "./subParts/features";
 import Attacks from "./attacks";
+import Equipment from "./subParts/equipment";
 
 function CharCreationMain() {
     return (<div className="main">
@@ -14,6 +15,7 @@ function CharCreationMain() {
         <Languages />
         <Features />
         <Attacks />
+        <Equipment />
     </div>);
 }
 

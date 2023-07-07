@@ -273,3 +273,18 @@ input[type="number"] {
 .font-size-14 {
     font-size: 14px;
 }
+.equipment {
+    border: 1px solid slategrey;
+}
+.equipment-items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+.float-left {
+    float: left;
+    display: inline;
+}
