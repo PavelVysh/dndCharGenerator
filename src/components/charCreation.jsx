@@ -1,7 +1,8 @@
 import React, { useState, createContext } from "react";
-import CharCreationHeader from "./charCreationComponents/charCreationHeader";
-import CharCreationMain from "./charCreationComponents/charCreationMain";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoadChar from "./charCreationComponents/loadChar/loadChar";
 import Header from "./header";
+import CharCreationContainer from "./charCreationConteiner";
 
 export const CharCreationContext = createContext();
 
@@ -28,17 +29,17 @@ function CharCreation() {
         setCharClass
     };
 
-    return <div>
-        <CharCreationContext.Provider value={contextValue}>
-            <div>
+    return (
+        <Router>
+            <CharCreationContext.Provider value={contextValue}>
                 <Header />
-            </div>
-            <div className="char-create container">
-                <CharCreationHeader />
-                <CharCreationMain />
-            </div>
-        </CharCreationContext.Provider>
-    </div>;
+                <Routes>
+                    <Route exact path="/" element={<CharCreationContainer />} />
+                    <Route exact path="/load" element={<LoadChar />} />
+                </Routes>
+            </CharCreationContext.Provider>
+        </Router>
+    );
 }
 
 export default CharCreation;

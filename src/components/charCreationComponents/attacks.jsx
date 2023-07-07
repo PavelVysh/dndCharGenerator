@@ -41,6 +41,7 @@ function Attacks() {
                 </div>
             </div>)
         })}
+        <p className="center zero-margin">Attacks & Spellcasting</p>
     </div>
 }
 
