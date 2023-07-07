@@ -53,10 +53,11 @@
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr 1fr;
     gap: 1px;
-    height: 65rem;
+    height: 60rem;
     width: 100%;
+    padding-bottom: 5rem;
 }
 
 .chars {
@@ -249,4 +250,26 @@ input[type="number"] {
     border: 1px solid chartreuse;
     width: 100%;
     height: 100%;
+}
+.attacks {
+
+    border: 1px solid aqua;
+}
+.weapon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.flex-item {
+    flex: 1 1 0px;
+}
+.flex-item-half {
+    flex: 0.6 0.6 0px;
+}
+.float-right {
+    float: right;
+    flex: 0 0 0;
+}
+.font-size-14 {
+    font-size: 14px;
 }

@@ -5,9 +5,11 @@ import Header from './components/header';
 
 function App() {
   return (<div>
-    <Header />
-    <CharCreation />
-    </div>
+    <React.StrictMode>
+      <Header />
+      <CharCreation />
+    </React.StrictMode>
+  </div>
   );
 }
 
