@@ -1,6 +1,7 @@
 import React, { useState, createContext } from "react";
 import CharCreationHeader from "./charCreationComponents/charCreationHeader";
 import CharCreationMain from "./charCreationComponents/charCreationMain";
+import Header from "./header";
 
 export const CharCreationContext = createContext();
 
@@ -27,10 +28,15 @@ function CharCreation() {
         setCharClass
     };
 
-    return <div className="char-create container">
+    return <div>
         <CharCreationContext.Provider value={contextValue}>
-            <CharCreationHeader />
-            <CharCreationMain />
+            <div>
+                <Header />
+            </div>
+            <div className="char-create container">
+                <CharCreationHeader />
+                <CharCreationMain />
+            </div>
         </CharCreationContext.Provider>
     </div>;
 }
