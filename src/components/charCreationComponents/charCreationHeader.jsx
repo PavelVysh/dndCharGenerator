@@ -1,11 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import LabelInput from "./subParts/labelInput";
 import GridItem from "./subParts/gridItem";
 import RaceSelector from "./subParts/selectors/raceSelector";
 import AlignmentSelector from "./subParts/selectors/alignmentSelector";
 import ClassSelector from "./subParts/selectors/classSelector";
 
-function CharCreationHeader() {
+function CharCreationHeader(props) {
+
+   useEffect(() => {
+      if(props.character !== null) {
+         document.getElementById('char-name').value = props.character.name;
+      }
+   });
+
    return <div className="wrapper">
       <div className="header char-name container">
          <div className="vert-center">

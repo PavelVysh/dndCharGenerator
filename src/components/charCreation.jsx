@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadChar from "./charCreationComponents/loadChar/loadChar";
 import Header from "./header";
@@ -34,7 +34,7 @@ function CharCreation() {
             <CharCreationContext.Provider value={contextValue}>
                 <Header />
                 <Routes>
-                    <Route exact path="/" element={<CharCreationContainer />} />
+                    <Route path="/" element={<CharCreationContainer />} />
                     <Route exact path="/load" element={<LoadChar />} />
                 </Routes>
             </CharCreationContext.Provider>

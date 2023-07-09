@@ -7,7 +7,7 @@ import { CharCreationContext } from "../../../charCreation";
 function RaceSelector() {
 
     const [prevRace, setPrevRace] = useState("");
-    const {setRace, stats, setStats} = useContext(CharCreationContext);
+    const {setRace, stats, setStats, race} = useContext(CharCreationContext);
 
     const props = {stats, setStats};
 
@@ -22,7 +22,7 @@ function RaceSelector() {
     return <div className="grid-item">
         <label htmlFor="race">Race</label>
         <br />
-        <select size={1} onChange={addStats} type="text" name="race" id="race">
+        <select size={1} onChange={addStats} type="text" name="race" id="race" value={race}>
             {races().map((race) => (
                 <option value={race} key={race}>{race}</option>
             ))}
