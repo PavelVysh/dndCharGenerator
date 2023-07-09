@@ -1,5 +1,5 @@
 function races() {
-    return ["","Elf", "Gnome", "Dragonborn", "Dwarf", "Half-Elf", "Human", "Half-Orc", "Halfling", "Tiefling"]
+    return ["","Elf", "Gnome", "Dragonborn", "Dwarf", "Half-elf", "Human", "Half-orc", "Halfling", "Tiefling"]
 }
 
 export default races;
