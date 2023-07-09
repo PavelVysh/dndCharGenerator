@@ -19,6 +19,7 @@ function CharCreation() {
 
     const [race, setRace] = useState("");
     const [charClass, setCharClass] = useState("");
+    const [equip, setEquip] = useState([]);
 
     const contextValue = {
         stats,
@@ -26,7 +27,9 @@ function CharCreation() {
         race,
         setRace,
         charClass,
-        setCharClass
+        setCharClass,
+        equip,
+        setEquip
     };
 
     return (

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Money from "./money";
+import { CharCreationContext } from "../../charCreation";
 
 function Equipment() {
 
-    const [equip, setEquip] = useState([]);
+    const {equip, setEquip} = useContext(CharCreationContext);
 
     function enter(event) {
         if (event.key === "Enter") {
