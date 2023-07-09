@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CharCreationHeader from "./charCreationComponents/charCreationHeader";
 import CharCreationMain from "./charCreationComponents/charCreationMain";
 import { useLocation } from "react-router-dom";
+import CharLoader from "./charCreationComponents/loadChar/charLoader";
 
 function CharCreationContainer() {
 
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-
     const id = searchParams.get('id');
     const [character, setCharacter] = useState(null);
 
@@ -31,8 +31,9 @@ function CharCreationContainer() {
     }, [id]);
 
     return <div>
-        <CharCreationHeader character={character} />
-        <CharCreationMain character={character} />
+        {character !== null && <CharLoader character={character}/>}
+        <CharCreationHeader />
+        <CharCreationMain />
     </div>
 }
 
