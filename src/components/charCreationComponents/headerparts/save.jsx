@@ -14,8 +14,9 @@ function Save() {
             race: race,
             alignment: document.getElementById('alignment').value,
             background: document.getElementById('background').value,
-            equipment: equip
-            //todo playerName and experience
+            equipment: equip,
+            playerName: document.getElementById('player-name').value,
+            experience: document.getElementById('experience').value
         }
     
         fetch(process.env.REACT_APP_API_URL + "/character", {

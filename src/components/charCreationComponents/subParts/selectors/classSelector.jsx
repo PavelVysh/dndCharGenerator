@@ -4,7 +4,7 @@ import {CharCreationContext} from "../../../charCreation";
 
 function ClassSelector() {
 
-    const {setCharClass} = useContext(CharCreationContext);
+    const {setCharClass, charClass} = useContext(CharCreationContext);
 
     function setClass(event) {
         setCharClass(event.target.value);
@@ -13,7 +13,7 @@ function ClassSelector() {
     return <div className="grid-item">
     <label htmlFor="class">Class</label>
     <br />
-    <select size={1} onChange={setClass} type="text" name="class" id="class">
+    <select size={1} onChange={setClass} type="text" name="class" id="class" value={charClass}>
         {classes().map((oneClass) => (
             <option value={oneClass} key={oneClass}>{oneClass}</option>
         ))}
