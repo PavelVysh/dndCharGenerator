@@ -1,25 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext} from "react";
+import { CharCreationContext } from "../../charCreation";
 
 function Skill(props) {
 
-    const [check, setCheck] = useState(false);
-    const [val, setVal] = useState(0);
+    const {skills, setSkills} = useContext(CharCreationContext);
 
     function changeCheck() {
-        setCheck(!check)
+        setSkills(prev => ({...prev, [props.id]: {...prev[props.id], toggle: !prev[props.id].toggle}}))
     }
 
     function changeVal(event) {
-        if (event.target.value > Number(props.stat) + (check && 3) + Number(val)) {
-            setVal(prev => prev + 1);
+        if (event.target.value > Number(props.stat) + (skills[props.id].toggle && 3) + skills[props.id].value) {
+            setSkills(prev => ({...prev, [props.id]: {...prev[props.id], value : skills[props.id].value + 1}}))
         } else {
-            setVal(prev => prev - 1);
+            setSkills(prev => ({...prev, [props.id]: {...prev[props.id], value : skills[props.id].value - 1}}))
         }
     }
-
     return <div>
-        <input type="checkbox" onClick={changeCheck}></input>
-        <input type="number" name={props.name} id={props.name} value={Number(props.stat) + (check && 3) + Number(val)} onChange={changeVal}></input>
+        <input type="checkbox" onChange={changeCheck} checked={skills[props.id].toggle}></input>
+        <input type="number" name={props.name} id={props.name} value={Number(props.stat) + (skills[props.id].toggle && 3) + skills[props.id].value} onChange={changeVal}></input>
         <label htmlFor={props.name}>{props.name}</label>
     </div>
 }

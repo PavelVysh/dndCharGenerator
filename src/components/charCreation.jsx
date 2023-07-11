@@ -1,4 +1,4 @@
-import React, { useState, createContext} from "react";
+import React, { useState, createContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadChar from "./charCreationComponents/loadChar/loadChar";
 import Header from "./header";
@@ -29,17 +29,34 @@ function CharCreation() {
         charisma: false
     });
 
+    const [skills, setSkills] = useState({
+        acrobatics: { toggle: false, value: 0 },
+        animalHandling: { toggle: false, value: 0 },
+        arcana: { toggle: false, value: 0 },
+        athletics: { toggle: false, value: 0 },
+        deception: { toggle: false, value: 0 },
+        history: { toggle: false, value: 0 },
+        insight: { toggle: false, value: 0 },
+        intimidation: { toggle: false, value: 0 },
+        investigation: { toggle: false, value: 0 },
+        medicine: { toggle: false, value: 0 },
+        nature: { toggle: false, value: 0 },
+        perception: { toggle: false, value: 0 },
+        performance: { toggle: false, value: 0 },
+        persuasion: { toggle: false, value: 0 },
+        religion: { toggle: false, value: 0 },
+        sleightOfHand: { toggle: false, value: 0 },
+        stealth: { toggle: false, value: 0 },
+        survival: { toggle: false, value: 0 }
+    })
+
     const contextValue = {
-        stats,
-        setStats,
-        race,
-        setRace,
-        charClass,
-        setCharClass,
-        equip,
-        setEquip,
-        stStats,
-        setStStats
+        stats, setStats,
+        race, setRace,
+        charClass, setCharClass,
+        equip, setEquip,
+        stStats, setStStats,
+        skills, setSkills
     };
 
     return (
