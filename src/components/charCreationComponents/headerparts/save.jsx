@@ -3,7 +3,7 @@ import { CharCreationContext } from "../../charCreation";
 
 function Save() {
 
-    const {equip, race, charClass} = useContext(CharCreationContext);
+    const {equip, race, charClass, stats} = useContext(CharCreationContext);
 
     function saveCharacter() {
     
@@ -16,7 +16,8 @@ function Save() {
             background: document.getElementById('background').value,
             equipment: equip,
             playerName: document.getElementById('player-name').value,
-            experience: document.getElementById('experience').value
+            experience: document.getElementById('experience').value,
+            stats: stats
         }
     
         fetch(process.env.REACT_APP_API_URL + "/character", {
