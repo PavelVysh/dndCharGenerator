@@ -4,6 +4,7 @@ import GridItem from "./subParts/gridItem";
 import RaceSelector from "./subParts/selectors/raceSelector";
 import AlignmentSelector from "./subParts/selectors/alignmentSelector";
 import ClassSelector from "./subParts/selectors/classSelector";
+import LevelInput from "./subParts/levelInput";
 
 function CharCreationHeader() {
 
@@ -11,7 +12,7 @@ function CharCreationHeader() {
       <div className="header char-name container">
          <div className="vert-center">
             <LabelInput labelFor="char-name" labelText="Character name" inputSize="8" inputType="text" inputName="char-name" inputId="char-name" />
-            <LabelInput labelFor="char-level" labelText="Character level" inputSize="8" inputType="text" inputName="char-level" inputId="char-level" />
+            <LevelInput labelFor="char-level" labelText="Character level" inputSize="8" inputType="text" inputName="char-level" inputId="char-level" />
          </div>
       </div>
       <div className="header stats container">

@@ -4,6 +4,7 @@ import SingleStat from "./subParts/singleStats";
 import SavingThrow from "./subParts/savingThrow";
 import Skill from "./subParts/skill";
 import { CharCreationContext } from "../charCreation";
+import Proficiency from "./subParts/proficiency";
 
 function Stats() {
 
@@ -33,7 +34,7 @@ function Stats() {
         <div className="right-part">
             <div className="single-stats container">
                 <SingleStat stat="inspiration" />
-                <SingleStat stat="proficiency" />
+                <Proficiency stat="proficiency" />
             </div>
             <div className="saving-throws container">
                 <SavingThrow name="strength" stat={strBonus} checkId='st-str'/>

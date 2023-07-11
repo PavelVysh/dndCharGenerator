@@ -29,6 +29,9 @@ function CharCreation() {
         charisma: false
     });
 
+    const [level, setLevel] = useState(0);
+    const [proficiency, setProficiency] = useState(0);
+
     const [skills, setSkills] = useState({
         acrobatics: { toggle: false, value: 0 },
         animalHandling: { toggle: false, value: 0 },
@@ -56,7 +59,9 @@ function CharCreation() {
         charClass, setCharClass,
         equip, setEquip,
         stStats, setStStats,
-        skills, setSkills
+        skills, setSkills,
+        level, setLevel,
+        proficiency, setProficiency
     };
 
     return (

@@ -3,25 +3,25 @@ import { CharCreationContext } from "../../charCreation";
 
 function CharLoader(props) {
 
-    const {setRace, setCharClass, setStats, setStStats, setSkills} = useContext(CharCreationContext);
+    const {setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency} = useContext(CharCreationContext);
 
     useEffect(() => {
         if(props.character !== null) {
            document.getElementById('char-name').value = props.character.name;
-           setRace(prev => prev = props.character.race);
-           setCharClass(prev => prev = props.character.charClass);
-           setStats(prev => prev = props.character.stats);
-           document.getElementById('char-level').value = props.character.level;
+           setRace(props.character.race);
+           setCharClass(props.character.charClass);
+           setStats(props.character.stats);
+           setLevel(props.character.level);
            document.getElementById('background').value = props.character.background;
            document.getElementById('alignment').value = props.character.alignment;
            document.getElementById('player-name').value = props.character.playerName;
            document.getElementById('experience').value = props.character.experience;
            document.getElementById('inspiration').value = props.character.inspiration;
-           document.getElementById('proficiency').value = props.character.proficiency;
-           setStStats(prev => prev = props.character.savingThrows);
-           setSkills(prev => prev = props.character.skills);
+           setStStats(props.character.savingThrows);
+           setSkills(props.character.skills);
+           setProficiency(Number(props.character.proficiency));
         }
-     }, [props.character, setRace, setCharClass, setStats, setStStats, setSkills]);
+     }, [props.character, setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency]);
 
 }
 
