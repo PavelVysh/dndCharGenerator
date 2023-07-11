@@ -3,7 +3,7 @@ import { CharCreationContext } from "../../charCreation";
 
 function CharLoader(props) {
 
-    const {setRace, setCharClass, setStats} = useContext(CharCreationContext);
+    const {setRace, setCharClass, setStats, setStStats} = useContext(CharCreationContext);
 
     useEffect(() => {
         if(props.character !== null) {
@@ -16,8 +16,11 @@ function CharLoader(props) {
            document.getElementById('alignment').value = props.character.alignment;
            document.getElementById('player-name').value = props.character.playerName;
            document.getElementById('experience').value = props.character.experience;
+           document.getElementById('inspiration').value = props.character.inspiration;
+           document.getElementById('proficiency').value = props.character.proficiency;
+           setStStats(prev => prev = props.character.savingThrows);
         }
-     }, [props.character, setRace, setCharClass, setStats]);
+     }, [props.character, setRace, setCharClass, setStats, setStStats]);
 
 }
 

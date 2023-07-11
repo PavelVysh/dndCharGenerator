@@ -20,6 +20,14 @@ function CharCreation() {
     const [race, setRace] = useState("");
     const [charClass, setCharClass] = useState("");
     const [equip, setEquip] = useState([]);
+    const [stStats, setStStats] = useState({
+        strength: false,
+        dexterity: false,
+        constitution: false,
+        intelligence: false,
+        wisdom: false,
+        charisma: false
+    });
 
     const contextValue = {
         stats,
@@ -29,7 +37,9 @@ function CharCreation() {
         charClass,
         setCharClass,
         equip,
-        setEquip
+        setEquip,
+        stStats,
+        setStStats
     };
 
     return (

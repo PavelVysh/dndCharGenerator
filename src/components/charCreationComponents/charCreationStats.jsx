@@ -20,6 +20,7 @@ function Stats() {
     const wisBonus = countBonus(stats.wisdom);
     const chaBonus = countBonus(stats.charisma);
 
+
     return <div className="chars">
         <div className="main-stats container">
             <Stat stat="strength" val={stats.strength} setter={setStats} />
@@ -35,12 +36,12 @@ function Stats() {
                 <SingleStat stat="proficiency" />
             </div>
             <div className="saving-throws container">
-                <SavingThrow name="Strength" stat={strBonus} />
-                <SavingThrow name="Dexterity" stat={dexBonus} />
-                <SavingThrow name="Constitution" stat={conBonus} />
-                <SavingThrow name="Intelligence" stat={intBonus} />
-                <SavingThrow name="Wisdom" stat={wisBonus} />
-                <SavingThrow name="Charisma" stat={chaBonus} />
+                <SavingThrow name="strength" stat={strBonus} checkId='st-str' isCheck={false}/>
+                <SavingThrow name="dexterity" stat={dexBonus} checkId='st-dex' isCheck={false}/>
+                <SavingThrow name="constitution" stat={conBonus} checkId='st-con' isCheck={false}/>
+                <SavingThrow name="intelligence" stat={intBonus} checkId='st-int' isCheck={false}/>
+                <SavingThrow name="wisdom" stat={wisBonus} checkId='st-wis' isCheck={false}/>
+                <SavingThrow name="charisma" stat={chaBonus} checkId='st-cha' isCheck={false}/>
                 <p className="text-center uppercase">Saving Throws</p>
             </div>
             <div className="skills container">

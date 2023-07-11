@@ -1,12 +1,11 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { CharCreationContext } from "../../charCreation";
 
 function Save() {
 
-    const {equip, race, charClass, stats} = useContext(CharCreationContext);
+    const { equip, race, charClass, stats, stStats } = useContext(CharCreationContext);
 
     function saveCharacter() {
-    
         const requestBody = {
             name: document.getElementById('char-name').value,
             level: document.getElementById('char-level').value,
@@ -17,9 +16,11 @@ function Save() {
             equipment: equip,
             playerName: document.getElementById('player-name').value,
             experience: document.getElementById('experience').value,
-            stats: stats
+            stats: stats,
+            savingThrows: stStats,
+            inspiration: document.getElementById('inspiration').value,
+            proficiency: document.getElementById('proficiency').value
         }
-    
         fetch(process.env.REACT_APP_API_URL + "/character", {
             method: 'POST',
             headers: {
