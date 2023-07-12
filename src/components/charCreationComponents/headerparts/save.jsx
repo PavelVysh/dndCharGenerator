@@ -3,7 +3,7 @@ import { CharCreationContext } from "../../charCreation";
 
 function Save() {
 
-    const { equip, race, charClass, stats, stStats, skills } = useContext(CharCreationContext);
+    const { equip, race, charClass, stats, stStats, skills, languages } = useContext(CharCreationContext);
 
     function saveCharacter() {
         const requestBody = {
@@ -20,7 +20,9 @@ function Save() {
             savingThrows: stStats,
             inspiration: document.getElementById('inspiration').value,
             proficiency: document.getElementById('proficiency').value,
-            skills: skills
+            skills: skills,
+            passiveWisdom : document.getElementById('passive-wisdom').value,
+            languages: languages
         }
         fetch(process.env.REACT_APP_API_URL + "/character", {
             method: 'POST',

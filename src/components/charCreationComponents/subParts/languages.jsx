@@ -1,20 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext} from "react";
 import PassiveWisdom from "./passiveWisdom";
+import { CharCreationContext } from "../../charCreation";
 
 function Languages() {
 
-    const [proficiencies, setProficiencies] = useState([]);
+    const {languages, setLanguages} = useContext(CharCreationContext);
 
     function enter(event) {
         const value = event.target.value;
         if (event.key === "Enter") {
-            setProficiencies(prev => [...prev, value]);
+            setLanguages(prev => [...prev, value]);
             event.target.value = "";
         }
     }
 
-    function removeProficiencie(index) {
-        setProficiencies(prev => {
+    function removeLanguage(index) {
+        setLanguages(prev => {
             return prev.filter((_, i) => i !== index);
         })
     }
@@ -22,11 +23,11 @@ function Languages() {
     return <div className="languages">
         <PassiveWisdom />
         <div className="proficiencies">
-            <input onKeyDown={enter} name="proficiencies" placeholder="enter stuff here"></input>
-            {proficiencies.map((prof, index) => {
+            <input onKeyDown={enter} name="languages" placeholder="Add known language"></input>
+            {languages.map((prof, index) => {
                 return <div key={index}>
                     <p className="prof zero-margin inline">{prof}</p>
-                    <button onClick={() => removeProficiencie(index)}>Remove</button>
+                    <button onClick={() => removeLanguage(index)}>Remove</button>
                 </div>
             })}
             <p className="center zero-margin">Other Proficiencies & Languages</p>

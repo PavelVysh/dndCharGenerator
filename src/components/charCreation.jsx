@@ -32,6 +32,8 @@ function CharCreation() {
     const [level, setLevel] = useState(0);
     const [proficiency, setProficiency] = useState(0);
 
+    const [languages, setLanguages] = useState([]);
+
     const [skills, setSkills] = useState({
         acrobatics: { toggle: false, value: 0 },
         animalHandling: { toggle: false, value: 0 },
@@ -61,7 +63,8 @@ function CharCreation() {
         stStats, setStStats,
         skills, setSkills,
         level, setLevel,
-        proficiency, setProficiency
+        proficiency, setProficiency,
+        languages, setLanguages
     };
 
     return (

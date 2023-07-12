@@ -3,7 +3,7 @@ import { CharCreationContext } from "../../charCreation";
 
 function CharLoader(props) {
 
-    const {setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency} = useContext(CharCreationContext);
+    const {setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency, setLanguages} = useContext(CharCreationContext);
 
     useEffect(() => {
         if(props.character !== null) {
@@ -11,7 +11,7 @@ function CharLoader(props) {
            setRace(props.character.race);
            setCharClass(props.character.charClass);
            setStats(props.character.stats);
-           setLevel(props.character.level);
+           setLevel(Number(props.character.level));
            document.getElementById('background').value = props.character.background;
            document.getElementById('alignment').value = props.character.alignment;
            document.getElementById('player-name').value = props.character.playerName;
@@ -20,8 +20,9 @@ function CharLoader(props) {
            setStStats(props.character.savingThrows);
            setSkills(props.character.skills);
            setProficiency(Number(props.character.proficiency));
+           setLanguages(props.character.languages);
         }
-     }, [props.character, setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency]);
+     }, [props.character, setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency, setLanguages]);
 
 }
 
