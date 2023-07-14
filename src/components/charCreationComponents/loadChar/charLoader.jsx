@@ -18,9 +18,9 @@ function CharLoader(props) {
            document.getElementById('experience').value = props.character.experience;
            document.getElementById('inspiration').value = props.character.inspiration;
            setStStats(props.character.savingThrows);
-         //   setSkills(props.character.skills);
+           setSkills(props.character.skills);
            setProficiency(Number(props.character.proficiency));
-         //   setLanguages(props.character.languages);
+           setLanguages(props.character.languages);
            document.getElementById('armorClass').value = props.character.armorClass;
            document.getElementById('maxHp').value = props.character.maxHp;
            document.getElementById('currentHp').value = props.character.currentHp;
