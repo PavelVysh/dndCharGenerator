@@ -4,11 +4,11 @@ function CurrentHp() {
     return (<div className="central-row">
         <div>
             <label htmlFor="maxhp">Hit Point Maximum</label>
-            <input name="maxhp" type="number" id="maxhp" size="2"></input>
+            <input name="maxhp" type="number" id="maxHp" size="2"></input>
         </div>
         <div>
             <label className="zero-margin">Current hit points</label>
-            <input name="currentHp" type="number" size="2"></input>
+            <input name="currentHp" type="number" id="currentHp" size="2"></input>
         </div>
     </div>);
 }

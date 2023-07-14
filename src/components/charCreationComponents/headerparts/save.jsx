@@ -22,7 +22,22 @@ function Save() {
             proficiency: document.getElementById('proficiency').value,
             skills: skills,
             passiveWisdom : document.getElementById('passive-wisdom').value,
-            languages: languages
+            languages: languages,
+            armorClass: document.getElementById('armorClass').value,
+            maxHp: document.getElementById('maxHp').value,
+            currentHp: document.getElementById('currentHp').value,
+            tempHp: document.getElementById('tempHp').value,
+            totalHitDice: document.getElementById('totalHitDice').value,
+            deathSaveSuccesses: {
+                t1: document.getElementById('d1').checked,
+                t2: document.getElementById('d2').checked,
+                t3: document.getElementById('d3').checked
+            },
+            deathSaveFailures: {
+                t1: document.getElementById('s1').checked,
+                t2: document.getElementById('s2').checked,
+                t3: document.getElementById('s3').checked 
+            }
         }
         fetch(process.env.REACT_APP_API_URL + "/character", {
             method: 'POST',

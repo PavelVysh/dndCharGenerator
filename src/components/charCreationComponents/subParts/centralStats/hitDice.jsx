@@ -26,7 +26,7 @@ function HitDice() {
     return (<div className="hit-dice">
         <div>
             <label htmlFor="total">Total</label>
-            <input type="number" name="total" id="total" size="2"></input>
+            <input type="number" name="total" id="totalHitDice" size="2"></input>
         </div>
         <div>
             <p className="center" name="hitDice" id="hitDice" size="2">{getHitDice()}</p>

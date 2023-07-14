@@ -18,11 +18,22 @@ function CharLoader(props) {
            document.getElementById('experience').value = props.character.experience;
            document.getElementById('inspiration').value = props.character.inspiration;
            setStStats(props.character.savingThrows);
-           setSkills(props.character.skills);
+         //   setSkills(props.character.skills);
            setProficiency(Number(props.character.proficiency));
-           setLanguages(props.character.languages);
+         //   setLanguages(props.character.languages);
+           document.getElementById('armorClass').value = props.character.armorClass;
+           document.getElementById('maxHp').value = props.character.maxHp;
+           document.getElementById('currentHp').value = props.character.currentHp;
+           document.getElementById('tempHp').value = props.character.tempHp;
+           document.getElementById('totalHitDice').value = props.character.totalHitDice;
+           document.getElementById('s1').checked = props.character.deathSaveFailures.t1;
+           document.getElementById('s2').checked = props.character.deathSaveFailures.t2;
+           document.getElementById('s3').checked = props.character.deathSaveFailures.t3;
+           document.getElementById('d1').checked = props.character.deathSaveSuccesses.t1;
+           document.getElementById('d2').checked = props.character.deathSaveSuccesses.t2;
+           document.getElementById('d3').checked = props.character.deathSaveSuccesses.t3; 
         }
-     }, [props.character, setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency, setLanguages]);
+     }, []);
 
 }
 
