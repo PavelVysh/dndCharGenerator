@@ -33,6 +33,7 @@ function CharLoader(props) {
            document.getElementById('d2').checked = props.character.deathSaveSuccesses.t2;
            document.getElementById('d3').checked = props.character.deathSaveSuccesses.t3; 
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
      }, []);
 
 }

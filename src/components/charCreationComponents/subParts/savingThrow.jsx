@@ -12,7 +12,7 @@ function SavingThrow(props) {
 
     return <div>
         <input type="checkbox" onChange={changeCheck} checked={stStats[props.name]}></input>
-        <input type="number" name={props.name} value={props.stat + (stStats[props.name] && proficiency)} readOnly></input>
+        <input type="number" name={props.name} value={props.stat + (stStats[props.name] && Number(proficiency))} readOnly></input>
         <label htmlFor={props.name}>{capitalizedLabel}</label>
     </div>
 }

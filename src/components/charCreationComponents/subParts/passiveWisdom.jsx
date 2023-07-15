@@ -7,7 +7,7 @@ function PassiveWisdom() {
     const { skills, stats, proficiency } = useContext(CharCreationContext);
 
     useEffect(() => {
-        setValue(10 + skills.perception.value + (skills.perception.toggle && proficiency) + Math.max(Math.min(Math.floor((Number(stats.wisdom) / 2) - 5), 10), -5));
+        setValue(10 + skills.perception.value + (skills.perception.toggle && Number(proficiency)) + Math.max(Math.min(Math.floor((Number(stats.wisdom) / 2) - 5), 10), -5));
     }, [skills, stats, proficiency]);
 
     return <div className="passive-wisdom container">

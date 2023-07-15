@@ -14,7 +14,7 @@ function Stat(props) {
     }
     return (<div className="main-stat container">
         <label htmlFor={props.stat}>{capitalizedLabel}</label>
-        <input type="number" onChange={getBonus} name={props.stat} id={props.stat} value={props.val}></input>
+        <input type="number" className="hide-arrows" onChange={getBonus} name={props.stat} id={props.stat} value={props.val}></input>
         <p className="stat-bonus">{countBonus(props.val) > 0 && "+"}{countBonus(props.val)}</p>
     </div>)
 }
