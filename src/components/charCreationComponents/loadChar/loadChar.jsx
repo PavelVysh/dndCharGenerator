@@ -23,7 +23,7 @@ function LoadChar() {
 
 
     return <div className="char-load">
-        <h1>Hello</h1>
+        <h1>Characters: </h1>
         {characters.map(char => {
             return <a className="char-ref" key={char.name} href={"/?id=" + char.name}>{char.name}</a>
         })}

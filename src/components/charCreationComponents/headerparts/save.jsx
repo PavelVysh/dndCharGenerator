@@ -3,7 +3,7 @@ import { CharCreationContext } from "../../charCreation";
 
 function Save() {
 
-    const { equip, race, charClass, stats, stStats, skills, languages } = useContext(CharCreationContext);
+    const { equip, race, charClass, stats, stStats, skills, languages, weapons } = useContext(CharCreationContext);
 
     function saveCharacter() {
         const requestBody = {
@@ -37,7 +37,12 @@ function Save() {
                 t1: document.getElementById('s1').checked,
                 t2: document.getElementById('s2').checked,
                 t3: document.getElementById('s3').checked 
-            }
+            },
+            weapons: weapons,
+            copper: document.getElementById('CP').value,
+            silver: document.getElementById('SP').value,
+            gold: document.getElementById('GP').value,
+            platinum: document.getElementById('PP').value
         }
         fetch(process.env.REACT_APP_API_URL + "/character", {
             method: 'POST',

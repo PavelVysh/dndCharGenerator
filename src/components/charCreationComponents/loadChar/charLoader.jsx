@@ -3,7 +3,7 @@ import { CharCreationContext } from "../../charCreation";
 
 function CharLoader(props) {
 
-    const {setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency, setLanguages} = useContext(CharCreationContext);
+    const {setRace, setCharClass, setStats, setStStats, setSkills, setLevel, setProficiency, setLanguages, setWeapons, setEquip} = useContext(CharCreationContext);
 
     useEffect(() => {
         if(props.character !== null) {
@@ -32,6 +32,12 @@ function CharLoader(props) {
            document.getElementById('d1').checked = props.character.deathSaveSuccesses.t1;
            document.getElementById('d2').checked = props.character.deathSaveSuccesses.t2;
            document.getElementById('d3').checked = props.character.deathSaveSuccesses.t3; 
+           setWeapons(props.character.weapons);
+           setEquip(props.character.equipment);
+           document.getElementById('CP').value = props.character.copper;
+           document.getElementById('SP').value = props.character.silver;
+           document.getElementById('GP').value = props.character.gold;
+           document.getElementById('PP').value = props.character.platinum;
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
      }, []);

@@ -53,7 +53,9 @@ function CharCreation() {
         sleightOfHand: { toggle: false, value: 0 },
         stealth: { toggle: false, value: 0 },
         survival: { toggle: false, value: 0 }
-    })
+    });
+
+    const [weapons, setWeapons] = useState([])
 
     const contextValue = {
         stats, setStats,
@@ -64,7 +66,8 @@ function CharCreation() {
         skills, setSkills,
         level, setLevel,
         proficiency, setProficiency,
-        languages, setLanguages
+        languages, setLanguages,
+        weapons, setWeapons
     };
 
     return (
