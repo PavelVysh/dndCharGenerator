@@ -3,7 +3,7 @@ import { CharCreationContext } from "../../charCreation";
 
 function Save() {
 
-    const { equip, race, charClass, stats, stStats, skills, languages, weapons } = useContext(CharCreationContext);
+    const { equip, race, charClass, stats, stStats, skills, languages, weapons, traits, ideals, flaws, bonds, features } = useContext(CharCreationContext);
 
     function saveCharacter() {
         const requestBody = {
@@ -21,7 +21,7 @@ function Save() {
             inspiration: document.getElementById('inspiration').value,
             proficiency: document.getElementById('proficiency').value,
             skills: skills,
-            passiveWisdom : document.getElementById('passive-wisdom').value,
+            passiveWisdom: document.getElementById('passive-wisdom').value,
             languages: languages,
             armorClass: document.getElementById('armorClass').value,
             maxHp: document.getElementById('maxHp').value,
@@ -36,13 +36,18 @@ function Save() {
             deathSaveFailures: {
                 t1: document.getElementById('s1').checked,
                 t2: document.getElementById('s2').checked,
-                t3: document.getElementById('s3').checked 
+                t3: document.getElementById('s3').checked
             },
             weapons: weapons,
             copper: document.getElementById('CP').value,
             silver: document.getElementById('SP').value,
             gold: document.getElementById('GP').value,
-            platinum: document.getElementById('PP').value
+            platinum: document.getElementById('PP').value,
+            traits: traits,
+            ideals: ideals,
+            flaws: flaws,
+            bonds: bonds,
+            features: features
         }
         fetch(process.env.REACT_APP_API_URL + "/character", {
             method: 'POST',

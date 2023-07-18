@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { CharCreationContext } from "../../charCreation";
 
 function Flaws() {
 
-    const [flaws, setFlaws] = useState([]);
+    const { flaws, setFlaws } = useContext(CharCreationContext);
 
     function enter(event) {
         if (event.key === "Enter") {

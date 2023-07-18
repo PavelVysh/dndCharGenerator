@@ -1,10 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { CharCreationContext } from "../../charCreation";
 
 function PersonalityTraits() {
 
-    const { stats, setStats } = useContext(CharCreationContext);
-    const [traits, setTraits] = useState([]);
+    const { stats, setStats, traits, setTraits } = useContext(CharCreationContext);
 
 
     function enter(event) {

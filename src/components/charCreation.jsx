@@ -33,7 +33,11 @@ function CharCreation() {
     const [proficiency, setProficiency] = useState(0);
 
     const [languages, setLanguages] = useState([]);
-
+    const [traits, setTraits] = useState([]);
+    const [ideals, setIdeals] = useState([]);
+    const [flaws, setFlaws] = useState([]);
+    const [bonds, setBonds] = useState([]);
+    const [features, setFeatures] = useState([]);
     const [skills, setSkills] = useState({
         acrobatics: { toggle: false, value: 0 },
         animalHandling: { toggle: false, value: 0 },
@@ -67,7 +71,12 @@ function CharCreation() {
         level, setLevel,
         proficiency, setProficiency,
         languages, setLanguages,
-        weapons, setWeapons
+        weapons, setWeapons,
+        traits, setTraits,
+        ideals, setIdeals,
+        flaws, setFlaws,
+        bonds, setBonds,
+        features, setFeatures
     };
 
     return (

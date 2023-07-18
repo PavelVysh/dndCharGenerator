@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { CharCreationContext } from "../../charCreation";
 
 function Features() {
 
-    const [features, setFeatures] = useState([]);
+    const { features, setFeatures } = useContext(CharCreationContext);
 
     function enter(event) {
         if (event.key === "Enter") {

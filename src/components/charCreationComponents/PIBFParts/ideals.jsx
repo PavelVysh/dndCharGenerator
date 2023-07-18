@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { CharCreationContext } from "../../charCreation";
 
 function Ideals() {
 
-    const [ideals, setIdeals] = useState([]);
+    const { ideals, setIdeals } = useContext(CharCreationContext);
 
     function enter(event) {
         const value = event.target.value;

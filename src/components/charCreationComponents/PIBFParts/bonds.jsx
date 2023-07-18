@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { CharCreationContext } from "../../charCreation";
 
 function Bonds() {
 
-    const [bonds, setBonds] = useState([]);
+    const {bonds, setBonds} = useContext(CharCreationContext);
 
     function enter(event) {
         if (event.key === "Enter") {
