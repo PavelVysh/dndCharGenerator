@@ -23,7 +23,7 @@ function Features() {
             return (
                 <div key={index}>
                     <p className="zero-margin inline">{feature}</p>
-                    <button onClick={() => remove(index)}>Remove</button>
+                    <button className="delete-button" onClick={() => remove(index)}>-</button>
                 </div>
             )
         })}

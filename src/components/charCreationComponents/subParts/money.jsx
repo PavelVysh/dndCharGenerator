@@ -2,8 +2,8 @@ import React from "react";
 
 function Money(props) {
     return <div>
-        <label htmlFor={props.curr}>{props.curr}</label>
-        <input size={3} name={props.curr} id={props.curr}></input>
+        <label className="float-left" htmlFor={props.curr}>{props.curr}</label>
+        <input className="float-right" size={3} name={props.curr} id={props.curr}></input>
     </div>
 }
 

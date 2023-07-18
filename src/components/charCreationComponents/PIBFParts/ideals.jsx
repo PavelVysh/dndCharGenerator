@@ -25,7 +25,7 @@ function Ideals() {
         {ideals.map((ideal, index) => {
             return <div key={index}>
                 <p className="ideal zero-margin inline">{ideal}</p>
-                <button onClick={() => removeIdeal(index)}>Remove</button>
+                <button className="delete-button" onClick={() => removeIdeal(index)}>-</button>
             </div>
         })}
         <p className="center zero-margin">Ideals</p>

@@ -38,7 +38,7 @@ function Attacks() {
                 <p className="flex-item-half zero-margin">{item.bonus}</p>
                 <div className="flex-item-half">
                     <p className="zero-margin inline">{item.damage}</p>
-                    <button onClick={() => remove(index)} className="float-right">-</button>
+                    <button onClick={() => remove(index)} className="float-right delete-button">-</button>
                 </div>
             </div>)
         })}

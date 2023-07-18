@@ -27,7 +27,7 @@ function Languages() {
             {languages.map((prof, index) => {
                 return <div key={index}>
                     <p className="prof zero-margin inline">{prof}</p>
-                    <button onClick={() => removeLanguage(index)}>Remove</button>
+                    <button className="delete-button" onClick={() => removeLanguage(index)}>-</button>
                 </div>
             })}
             <p className="center zero-margin">Other Proficiencies & Languages</p>

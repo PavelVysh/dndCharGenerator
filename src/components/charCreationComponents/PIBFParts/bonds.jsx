@@ -23,7 +23,7 @@ function Bonds() {
         {bonds.map((bond, index) =>
             <div key={index}>
                 <p className="bond zero-margin inline">{bond}</p>
-                <button onClick={() => remove(index)}>Remove</button>
+                <button className="delete-button" onClick={() => remove(index)}>-</button>
             </div>
         )}
         <p className="center zero-margin">Bonds</p>

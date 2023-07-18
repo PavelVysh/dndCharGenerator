@@ -5,7 +5,14 @@
     min-width: 810px;
     
 }
-
+body {
+    background-color: rgb(250, 250, 250);
+}
+.main-container {
+    background-color: rgb(240, 240, 240);
+    border: 1px solid black;
+    border-radius: 1%;
+}
 
 .char-create.container {
     border: 1px solid black;
@@ -29,7 +36,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px;
     height: 100%;
     width: 100%;
 }
@@ -55,10 +61,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1.5fr 1.5fr 1fr;
-    gap: 1px;
     height: 60rem;
     width: 100%;
-    padding-bottom: 5rem;
 }
 
 .chars {
@@ -71,12 +75,12 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid red;
+    border: 1px solid black;
     height: 100%;
     width: 35%;
 }
 .main-stat.container {
-    border: 2px solid greenyellow;
+    border: 1px solid black;
 }
 .main-stat.container * {
     display: block;
@@ -99,12 +103,12 @@ input[type="number"] {
 }
 .saving-throws.container {
     display: inline-block;
-    border: 1px solid salmon;
+    border: 1px solid black;
     width: 100%;
 }
 .skills.container {
     display: inline-block;
-    border: 1px solid lime;
+    border: 1px solid black;
     width: 100%;
 }
 .right-part {
@@ -124,7 +128,7 @@ input[type="number"] {
     text-transform: uppercase;
 }
 .central-stats {
-    border: 1px solid blue;
+    border: 1px solid black;
 }
 .center {
     text-align: center;
@@ -134,7 +138,7 @@ input[type="number"] {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid red;
+    border: 1px solid black;
     height: 100%;
     flex: 1 1 0px;
     width: 0;
@@ -149,7 +153,7 @@ input[type="number"] {
 }
 .central-row {
     height: 25%;
-    border: 1px solid burlywood;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,11 +161,11 @@ input[type="number"] {
 }
 .central-bot-row {
     display: flex;
-    border: 1px solid olivedrab;
+    border: 1px solid black;
     height: 29%;
 }
 .hit-dice {
-    border: 1px solid purple;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,7 +190,7 @@ input[type="number"] {
 .personality-traits {
     width: 100%;
     flex: 1 1 auto;
-    border: 1px solid greenyellow;
+    border: 1px solid black;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -195,7 +199,7 @@ input[type="number"] {
 .ideals {
     width: 100%;
     flex: 1 1 auto;
-    border: 1px solid gray;
+    border: 1px solid black;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -204,7 +208,7 @@ input[type="number"] {
 .bonds {
     width: 100%;
     flex: 1 1 auto;
-    border: 1px solid blueviolet;
+    border: 1px solid black;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -214,7 +218,7 @@ input[type="number"] {
 .flaws {
     width: 100%;
     flex: 1 1 auto;
-    border: 1px solid orange;
+    border: 1px solid black;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -229,7 +233,7 @@ input[type="number"] {
     align-items: center;
     flex-direction: column;
     position: relative;
-    border: 1px solid orchid;
+    border: 1px solid black;
     width: 100%;
     grid-row: 3;
 }
@@ -238,7 +242,7 @@ input[type="number"] {
     align-items: center;
     flex-direction: column;
     position: relative;
-    border: 1px solid plum;
+    border: 1px solid black;
     width: 100%;
     grid-row: 2 / span 2;
     grid-column: 3;
@@ -248,7 +252,7 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid chartreuse;
+    border: 1px solid black;
     width: 100%;
     height: 100%;
 }
@@ -257,7 +261,7 @@ input[type="number"] {
     align-items: center;
     flex-direction: column;
     position: relative;
-    border: 1px solid aqua;
+    border: 1px solid black;
 }
 .weapon {
     width: 100%;
@@ -278,7 +282,7 @@ input[type="number"] {
     font-size: 14px;
 }
 .equipment {
-    border: 1px solid slategrey;
+    border: 1px solid black;
 }
 .equipment-items {
     position: relative;
@@ -294,9 +298,20 @@ input[type="number"] {
 }
 .header-div {
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
 }
 .char-ref {
     display: block;
+}
+input, select {
+    background-color: rgb(250, 250, 250);
+    border: 1px solid black;
+} 
+.delete-button {
+    border: 1px solid;
+    border-radius: 20%;
+    background-color: #ff6a009d;
+    margin-left: 10px;
 }

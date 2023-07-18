@@ -31,7 +31,7 @@ function Equipment() {
             {equip.map((item, index) => {
                 return <div key={index}>
                     <p className="zero-margin inline">{item}</p>
-                    <button onClick={() => remove(index)}>Remove</button>
+                    <button className="delete-button" onClick={() => remove(index)}>-</button>
                 </div>
             })}
         </div>

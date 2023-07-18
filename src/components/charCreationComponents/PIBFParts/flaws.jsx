@@ -22,7 +22,7 @@ function Flaws() {
         {flaws.map((flaw, index) =>
             <div className="flaw" key={index}>
                 <p className="flaw inline zero-margin">{flaw}</p>
-                <button onClick={() => remove(index)}>Remove</button>
+                <button className="delete-button" onClick={() => remove(index)}>-</button>
             </div>
         )}
         <p className="center zero-margin">Flaws</p>

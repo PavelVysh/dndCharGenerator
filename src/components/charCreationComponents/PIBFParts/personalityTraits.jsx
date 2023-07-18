@@ -31,7 +31,7 @@ function PersonalityTraits() {
         {traits.map((trait, index) => {
             return <div key={index}>
                 <p className="trait zero-margin inline" >{trait}</p>
-                <button onClick={() => removeTrait(index)}>Remove</button>
+                <button className="delete-button" onClick={() => removeTrait(index)}>-</button>
             </div>
         })}
         <p className="center zero-margin">Personality Traits</p>
