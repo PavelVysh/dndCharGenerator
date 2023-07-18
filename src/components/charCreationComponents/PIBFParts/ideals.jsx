@@ -21,7 +21,7 @@ function Ideals() {
     }
 
     return <div className="ideals">
-        <input onKeyDown={enter} name="ideal" placeholder="Do you have any ideals?"></input>
+        <input onKeyDown={enter} name="ideal" placeholder="Ideals"></input>
         {ideals.map((ideal, index) => {
             return <div key={index}>
                 <p className="ideal zero-margin inline">{ideal}</p>

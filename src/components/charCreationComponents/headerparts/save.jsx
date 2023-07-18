@@ -59,7 +59,7 @@ function Save() {
     }
 
     return <div>
-        <button onClick={saveCharacter}>Save</button>
+        <button className="save-button" onClick={saveCharacter}>Save</button>
     </div>
 }
 

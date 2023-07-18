@@ -315,3 +315,16 @@ input, select {
     background-color: #ff6a009d;
     margin-left: 10px;
 }
+.save-button {
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 10%;
+    padding: 0.5rem 1rem;
+    transition-duration: 0.2s;
+  }
+  .save-button:hover {
+    background-color: white; /* Green */
+    color: black;
+    border: 1px solid #4CAF50;
+  }
