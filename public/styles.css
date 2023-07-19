@@ -40,6 +40,20 @@ body {
     width: 100%;
 }
 
+.char-load {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.char-ref {
+    border: 1px solid black;
+    background-color: rgb(185, 185, 185);
+    border-radius: 5%;
+    margin: 5px; 
+    padding: 2px;
+}
+
 .grid-item {
     align-self: center;
 }
@@ -63,6 +77,9 @@ body {
     grid-template-rows: 1.5fr 1.5fr 1fr;
     height: 60rem;
     width: 100%;
+}
+.elastic-container {
+    margin: 5px;
 }
 
 .chars {
@@ -301,9 +318,6 @@ input[type="number"] {
     justify-content: space-around;
     align-items: center;
     margin: 20px 0;
-}
-.char-ref {
-    display: block;
 }
 input, select {
     background-color: rgb(250, 250, 250);

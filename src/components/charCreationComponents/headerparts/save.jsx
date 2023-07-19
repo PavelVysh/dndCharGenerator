@@ -6,6 +6,12 @@ function Save() {
     const { equip, race, charClass, stats, stStats, skills, languages, weapons, traits, ideals, flaws, bonds, features } = useContext(CharCreationContext);
 
     function saveCharacter() {
+
+        if (document.getElementById('char-name').value === "") {
+            alert('Character needs a name');
+            return;
+        }
+
         const requestBody = {
             name: document.getElementById('char-name').value,
             level: document.getElementById('char-level').value,
